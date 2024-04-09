@@ -1,0 +1,385 @@
+*,
+*::before,
+
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    background-image: url(shop.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #09161f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button,
+li,
+a{
+    all: unset;
+    box-sizing: border-box;
+}
+#dropdown{
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    max-width: 220px;
+    width: 100%;
+    background-color: #754e01ef;
+    border-radius: var(-border-radius);
+    position: relative;
+    margin-top: 190px ;
+    margin-left: 180px ;
+    z-index: 1;
+   
+}
+.dropdown-toggle,
+.menu-item,
+.submenu-item{
+    width: 100%;
+    padding: 12px 20px;
+    cursor: pointer;
+    
+}
+
+:is(.menu-item, .submenu-item):first-child{
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+}
+
+:is(.menu-item, .submenu-item):last-child{
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+:is(.menu-item, .submenu-item):hover{
+    background-color: #faf6ea;
+}
+.dropdown-toggle,
+.submenu-toggle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-toggle > span{
+    color: rgb(255, 255, 255);
+    margin-left: 65px;
+
+}
+.dropdown-toggle > span:hover{
+    text-decoration: underline;
+}
+
+i{
+    color: #db8400;
+    transition: 0.25s ease;
+}
+
+.dropdown-toggle.open > i{
+    rotate: 180deg;
+}
+.dropdown{
+    position: relative;
+}
+
+.menu,
+.submenu{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: var(--border-radius);
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.menu{
+    width: 100%;
+    translate: 0 -12px;
+}
+
+.menu.open{
+    visibility: visible;
+    opacity: 10;
+    translate: 0 12px;
+    
+}
+
+.submenu{
+    width: max-content;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    translate: -12px 0;
+    
+}
+.menu-item:hover> .submenu-toggle + .submenu{
+    visibility: visible;
+    opacity: 1;
+    translate: 8px 0;
+    
+}
+
+
+.background-container{
+    width: 530px;
+    height:630px;
+    box-shadow:2px 5px 5px 0px rgba(0,0,0,0.75);
+    background-color: rgba(255, 254, 254, 0.075);
+    
+}
+   
+.motor-logo{
+    width: 80px;
+    height: 80px;
+    box-shadow: 0px 9px 44px 2px rgba(189, 40, 40, 0.747);
+    position: absolute;
+    left: 40px;
+    bottom: 150px;
+    border-radius: 30px;
+    background-image: url(motor.jpg);
+    background-size: cover;
+    background-position: center;
+    
+   
+
+}
+
+
+.motor{
+    position: absolute;
+    color: rgb(230, 240, 243);
+    margin-top:-140px;
+     font-family: "Fira Sans", sans-serif;
+}
+.basic-info{
+    position: absolute;
+    margin-top: -110px;
+    color:rgb(231, 222, 222);
+    font-weight:normal;
+    font-size: 24px;
+
+}
+
+
+.customer-info{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 30px;
+
+}
+
+.information{
+    color: rgb(255, 255, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Sansita", sans-serif;
+}
+.name{
+    padding: 10px;
+    font-family: "Sansita", sans-serif;
+    color: black;
+}
+.email{
+    padding-left: 10px;
+    font-family: "Sansita", sans-serif;
+    color: black;
+}
+.age{
+    padding-top: 10px;
+    margin-left: 25px;
+    font-family: "Sansita", sans-serif;
+    color: black;
+}
+.input-container{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 110px;
+}
+.text{
+margin: 10px;
+padding: 7px;
+border-radius: 10px;
+width: 200px;
+color: black;
+
+
+}
+.email{
+margin: 10px;
+padding: 7px;
+border-radius: 10px;
+margin-bottom: 10px;
+width: 200px;
+color: black;
+
+
+}
+.number{
+margin:10px ;
+padding: 7px;
+border-radius: 10px;
+width: 60px;
+color: black;
+}
+
+.payments{
+    position: absolute;
+    margin-top: 250px;
+    margin-left:150px ;
+}
+
+.Modeofpayments{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    font-family: "Sansita", sans-serif;
+    margin-top: -50px;
+
+}
+
+.gcash{
+    padding: 10px;
+    color: white;
+    background-color: #db8400;
+    margin-right: 100px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.cash{
+    display: inline;
+    padding:10px ;
+    color: white;
+    background-color: #db8400;
+    margin-right: 100px;
+    border-radius: 10px;
+    transition: 0.5s;
+
+}
+
+.divider{
+    margin: 50px;
+    color:white;
+    font-size: 30px;
+}
+
+.gcash:hover,
+.cash:hover{
+    font-size: 15px;
+    text-decoration: underline;
+    border: 2px white solid;
+}
+
+.gcash:focus,
+.cash:focus{
+    text-decoration: underline;
+    border: 2px white solid;
+
+}
+
+.order{
+    position: absolute;
+    margin-top: 320px;
+    margin-left: 120px;
+}
+
+.place{
+    padding: 15px;
+    background-color:green;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+.cancel{
+    padding: 15px;
+    background-color: red;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+.last{
+    margin: 40px;
+}
+
+.place:hover,
+.cancel:hover{
+    font-size: 15px;
+    text-decoration: underline;
+    border: 2px solid yellow;
+}
+ 
+.place:focus,
+.cancel:focus{
+    border: 2px solid white;
+
+}
+
+.secondback{
+    width: 300px;
+    height: 350px;
+    box-shadow: 2px 14px 129px 27px black ;
+    position: absolute;
+    display: block;
+    margin-right: 850px;
+}
+
+.comments{
+    font-size: 24px;
+    font-family: "Sansita", sans-serif;
+    color: white;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.textarea{
+    margin-left: 10px;
+}
+
+.radioone{
+    width: 25px;
+    height: 25px;
+    margin-top: 30px;
+    margin-left: 30px;
+    position: absolute;
+    display: block;
+}
+
+.radiotwo{
+    width: 25px;
+    height: 25px;
+    margin-top: 60px;
+    margin-left: 30px;
+    position: absolute;
+    display: block;
+}
+.radioone:checked + .radiotwo{
+    display: none;
+}
+.radiotwo:checked + .radioone{
+    display: none;
+}
+.walkin{
+    position: absolute;
+    display: block;
+    margin-left: 60px;
+    margin-top: -10px;
+    font-family: "Sansita", sans-serif;
+    color: green;
+}
+.onlineorder{
+    position: absolute;
+    display: block;
+    margin-left: 58px;
+    margin-top: 40px;
+    font-family: "Sansita", sans-serif;
+    color: green;
+}
